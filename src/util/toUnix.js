@@ -1,4 +1,3 @@
-module.exports = Date.prototype.toUnix = function () {
-  const date = this
+module.exports = function toUnix (date) {
   return { unix: date.getTime() }
 }
