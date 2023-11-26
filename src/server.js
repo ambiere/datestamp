@@ -5,7 +5,7 @@ const cors = require('cors')
 const router = require('./routes')
 const pkg = require('../package.json')
 const routeNotFound = require('./middleware/routeNotFound')
-const serverStartUpLog = require('./config/serverStartUpLog')
+const serverStartUpLog = require('./util/serverStartUpLog')
 
 dotenv.config()
 
