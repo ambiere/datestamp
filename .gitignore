@@ -129,3 +129,7 @@ dist
 .yarn/install-state.gz
 .pnp.*
 .tap
+
+#esbuild
+build
+.vercel
