@@ -1,4 +1,3 @@
-module.exports = Date.prototype.toUTC = function () {
-  const date = this
+module.exports = function toUTC (date) {
   return { utc: date.toUTCString() }
 }
