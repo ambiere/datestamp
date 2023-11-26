@@ -1,6 +1,6 @@
 {
   "name": "@datestamp",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Timestamp Microservice: Simple API for managing time-related operations. Built with Node.js & Express.",
   "main": "src/server.js",
   "scripts": {
