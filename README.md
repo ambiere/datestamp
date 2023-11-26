@@ -26,14 +26,14 @@ pnpm install
 npm start
 ```
 
-The server runs on <a href="localhost:3000">localhost:3000</a> by default. You can modify the port in your `.env` file
+The server runs on <a href="localhost:3000/v0/api">localhost:3000/v0/api</a> by default. You can modify the port in your `.env` file
 
 ### 3.0 Endpoint:
 
 Send a GET request to:
 
 ```
-http://localhost:3000/v1/api/datestamp/:date_string
+http://localhost:3000/v0/api/datestamp/:date_string
 ```
 
 Replace `:date_string` in the URL with the date to convert (e.g., 2023-11-26, 1637894400 for Unix timestamp).
@@ -41,7 +41,7 @@ Replace `:date_string` in the URL with the date to convert (e.g., 2023-11-26, 16
 Example:
 
 ```bash
-curl http://localhost:3000/v1/api/datestamp/2023-11-26
+curl http://localhost:3000/v0/api/datestamp/2023-11-26
 ```
 
 Response:
@@ -55,7 +55,7 @@ Response:
 
 ## API Endpoints
 
-`GET /v1/api/datestamp/:date_string` Retrieves Unix and UTC timestamps for the provided date.
+`GET /v0/api/datestamp/:date_string` Retrieves Unix and UTC timestamps for the provided date.
 
 ## Contributing
 
