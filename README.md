@@ -1,4 +1,4 @@
-## xcixtimestamp
+## datestamp
 
 A simple Timestamp Microservice built using Express and Node.js that generates Unix and UTC timestamps for provided dates.
 
@@ -19,8 +19,8 @@ A simple Timestamp Microservice built using Express and Node.js that generates U
 #### 1.0 Installation:
 
 ```bash
-git clone https://github.com/zhid0399123/xcixtimestamp.git
-cd xcixtimestamp
+git clone https://github.com/zhid0399123/datestamp.git
+cd datestamp
 pnpm install
 ```
 
@@ -37,7 +37,7 @@ The server runs on <a href="localhost:3000">localhost:3000</a> by default. You c
 Send a GET request to:
 
 ```
-http://localhost:3000/v1/api/xcixtimestamp/:date_string
+http://localhost:3000/v1/api/datestamp/:date_string
 ```
 
 Replace `:date_string` in the URL with the date to convert (e.g., 2023-11-26, 1637894400 for Unix timestamp).
@@ -45,7 +45,7 @@ Replace `:date_string` in the URL with the date to convert (e.g., 2023-11-26, 16
 Example:
 
 ```bash
-curl http://localhost:3000/v1/api/xcixtimestamp/2023-11-26
+curl http://localhost:3000/v1/api/datestamp/2023-11-26
 ```
 
 Response:
@@ -61,7 +61,7 @@ Response:
 
 ---
 
-`GET /v1/api/xcixtimestamp/:date_string` Retrieves Unix and UTC timestamps for the provided date.
+`GET /v1/api/datestamp/:date_string` Retrieves Unix and UTC timestamps for the provided date.
 
 ### Contributing
 
