@@ -4,15 +4,19 @@ A simple Timestamp Microservice built using Express and Node.js that generates U
 
 [![js-standard-style](https://img.shields.io/badge/style-standard-brightgreen.svg?style=flat)](https://standardjs.com/)
 
-## Features
+### Features
+
+---
 
 1. **Unix Timestamp**: Provides the Unix timestamp for a given date.
 2. **UTC Timestamp**: Returns the UTC representation of the provided date.
 3. **HTTP Request Handling**: Accepts HTTP requests with a date parameter and responds with timestamp information.
 
-## Usage
+### Usage
 
-### 1.0 Installation:
+---
+
+#### 1.0 Installation:
 
 ```bash
 git clone https://github.com/zhid0399123/xcixtimestamp.git
@@ -20,7 +24,7 @@ cd xcixtimestamp
 pnpm install
 ```
 
-### 2.0 Start the Server:
+#### 2.0 Start the Server:
 
 ```bash
 npm start
@@ -28,7 +32,7 @@ npm start
 
 The server runs on <a href="localhost:3000">localhost:3000</a> by default. You can modify the port in your `.env` file
 
-### 3.0 Endpoint:
+#### 3.0 Endpoint:
 
 Send a GET request to:
 
@@ -53,14 +57,20 @@ Response:
 }
 ```
 
-## API Endpoints
+### API Endpoints
+
+---
 
 `GET /v1/api/xcixtimestamp/:date_string` Retrieves Unix and UTC timestamps for the provided date.
 
-## Contributing
+### Contributing
+
+---
 
 Contributions are welcome! Feel free to open issues or submit pull requests. Please refer to the [Contributing Guidelines](CONTRIBUTING.md) to get started.
 
-## License
+### License
+
+---
 
 This project is licensed under the MIT License. Refer to the [LICENSE](LICENSE) file for more details.
