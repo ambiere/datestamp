@@ -1,16 +1,32 @@
-"use strict"
+'use strict'
 
-const { Router, json } = require("express")
-const pino_http = require("pino-http")
-const loggerOptions = require("../config/loggerOptions")
-const errorHandler = require("../middleware/errorHandler")
+const { Router, json } = require('express')
+const pinoHttp = require('pino-http')
+const loggerOptions = require('../config/loggerOptions')
+const errorHandler = require('../middleware/errorHandler')
+const toUnix = require('../util/toUnix')
+const toUTC = require('../util/toUTC')
 const router = Router()
 
 router.use(json())
-router.use(pino_http({ ...loggerOptions }))
+router.use(pinoHttp({ ...loggerOptions }))
 
-router.get("/:date", async function (req, res, next) {
-  res.json({ date: req.params.date })
+toUTC()
+toUnix()
+
+router.get('/:date', async function (req, res, next) {
+  const dateParam = req.params.date
+  let date = {}
+  isNaN(dateParam) ? (date = new Date(dateParam)) : (date = new Date(parseInt(dateParam)))
+  try {
+    if (date.toString() === 'Invalid date') {
+      const error = new Error('Invalid date')
+      throw error
+    }
+    res.json({ ...date.toUnix(), ...date.toUTC() })
+  } catch (error) {
+    next(error)
+  }
 })
 
 router.use(errorHandler)
