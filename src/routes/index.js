@@ -11,9 +11,6 @@ const router = Router()
 router.use(json())
 router.use(pinoHttp({ ...loggerOptions }))
 
-toUTC()
-toUnix()
-
 router.get('/:date', async function (req, res, next) {
   const dateParam = req.params.date
   let date = {}
@@ -23,7 +20,7 @@ router.get('/:date', async function (req, res, next) {
       const error = new Error('Invalid date')
       throw error
     }
-    res.json({ ...date.toUnix(), ...date.toUTC() })
+    res.json({ ...toUnix(date), ...toUTC(date) })
   } catch (error) {
     next(error)
   }
