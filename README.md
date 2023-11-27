@@ -2,7 +2,9 @@
 
 A simple Timestamp Microservice built using Express and Node.js that generates Unix and UTC timestamps for provided dates.
 
-[![js-standard-style](https://img.shields.io/badge/style-standard-brightgreen.svg?style=flat)](https://standardjs.com/)
+[![js-standard-style](https://img.shields.io/badge/style-standard-brightgreen.svg?style=flat)](https://standardjs.com/) &nbsp;
+[![Test](https://github.com/zhid0399123/datestamp/actions/workflows/CI.yml/badge.svg)](https://github.com/zhid0399123/datestamp/actions/workflows/CI.yml) &nbsp;
+[![Deployment](https://github.com/zhid0399123/datestamp/actions/workflows/fly.yml/badge.svg)](https://github.com/zhid0399123/datestamp/actions/workflows/fly.yml) &nbsp;
 
 ## Features
 
