@@ -3,19 +3,22 @@ const dotenv = require('dotenv')
 const compression = require('compression')
 const cors = require('cors')
 const router = require('./routes')
+const pkg = require('../../package.json')
 const routeNotFound = require('./middleware/routeNotFound')
 const errorHandler = require('./middleware/errorHandler')
+const path = require('path')
 
 dotenv.config()
 
 const app = express()
 app.use(cors())
-app.use(express.static('public'))
 app.use(compression())
+app.get('/', async (req, res) => res.json({ root: true }))
+app.get('/v0/api/datestamp', async (req, res) => res.sendFile(path.join(__dirname, '../../', 'public/')))
+app.get('/v0/api/assets/:file', async (req, res) => res.sendFile(path.join(__dirname, '../../', `public/assets/${req.params.file}`)))
 app.use('/v0/api/datestamp/', router)
-app.get('/', async function (req, res) {
-  res.json({ root: true })
-})
+app.get('/v0/api/version', async (req, res) => res.json({ version: pkg.version.at(0) }))
+
 app.use(routeNotFound)
 app.use(errorHandler)
 module.exports = app
