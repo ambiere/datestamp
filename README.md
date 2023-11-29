@@ -55,7 +55,7 @@ Response:
 }
 ```
 
-## Deployment on fly.io
+## Deployment 
 
 The **datestamp** Microservice is deployed and accessible via fly.io, allowing users to interact with the API endpoints. Follow these steps to access the deployed API:
 
