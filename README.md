@@ -2,7 +2,9 @@
 
 A simple Timestamp Microservice built using Express and Node.js that generates Unix and UTC timestamps for provided dates.
 
-[![js-standard-style](https://img.shields.io/badge/style-standard-brightgreen.svg?style=flat)](https://standardjs.com/)
+[![js-standard-style](https://img.shields.io/badge/style-standard-brightgreen.svg?style=flat)](https://standardjs.com/) &nbsp;
+[![Test](https://github.com/zhid0399123/datestamp/actions/workflows/CI.yml/badge.svg)](https://github.com/zhid0399123/datestamp/actions/workflows/CI.yml) &nbsp;
+[![Deployment](https://github.com/zhid0399123/datestamp/actions/workflows/fly.yml/badge.svg)](https://github.com/zhid0399123/datestamp/actions/workflows/fly.yml) &nbsp;
 
 ## Features
 
@@ -26,14 +28,14 @@ pnpm install
 npm start
 ```
 
-The server runs on <a href="localhost:3000">localhost:3000</a> by default. You can modify the port in your `.env` file
+The server runs on <a href="http://0.0.0.0:3000/v0/api/datestamp">http://0.0.0.0:3000/v0/api/datestamp</a> by default. You can modify the port in your `.env` file
 
 ### 3.0 Endpoint:
 
 Send a GET request to:
 
 ```
-http://localhost:3000/v1/api/datestamp/:date_string
+http://0.0.0.0:3000/v0/api/datestamp/:date_string
 ```
 
 Replace `:date_string` in the URL with the date to convert (e.g., 2023-11-26, 1637894400 for Unix timestamp).
@@ -41,7 +43,7 @@ Replace `:date_string` in the URL with the date to convert (e.g., 2023-11-26, 16
 Example:
 
 ```bash
-curl http://localhost:3000/v1/api/datestamp/2023-11-26
+curl http://0.0.0.0:3000/v0/api/datestamp/2023-11-26
 ```
 
 Response:
@@ -55,7 +57,7 @@ Response:
 
 ## API Endpoints
 
-`GET /v1/api/datestamp/:date_string` Retrieves Unix and UTC timestamps for the provided date.
+`GET /v0/api/datestamp/:date_string` Retrieves Unix and UTC timestamps for the provided date.
 
 ## Contributing
 
