@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', (e) => {
       .fetch('version')
       .then((res) => res.json())
       .then((version) => {
-        console.log(version)
         const date = new Date()
         resourceAnchor.setAttribute('href', `datestamp/${date}`)
         resourceAnchor.innerHTML = `<p>/datestamp/${date.getDate()}-${date.getMonth() + 1}-${date.getFullYear()}`
