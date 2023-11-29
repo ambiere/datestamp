@@ -12,7 +12,7 @@ A simple Timestamp Microservice built using Express and Node.js that generates U
 2. **UTC Timestamp**: Returns the UTC representation of the provided date.
 3. **HTTP Request Handling**: Accepts HTTP requests with a date parameter and responds with timestamp information.
 
-## Usage
+## Usage locally
 
 ### 1.0 Installation:
 
@@ -53,6 +53,18 @@ Response:
   "unix": 1679942400,
   "utc": "Sun, 26 Nov 2023 00:00:00 GMT"
 }
+```
+
+## Deployment on fly.io
+
+The **datestamp** Microservice is deployed and accessible via fly.io, allowing users to interact with the API endpoints. Follow these steps to access the deployed API:
+
+1. **Base URL**: The deployed API can be accessed at [https://datestamp.fly.dev/v0/api/datestamp](https://datestamp.fly.dev/v0/api/datestamp).
+
+2. **Usage Examples**: Here's an example using cURL to convert a timestamp to Unix time:
+
+```bash
+curl -X GET https://datestamp.fly.dev/v0/api/datestamp/1627804800000
 ```
 
 ## API Endpoints

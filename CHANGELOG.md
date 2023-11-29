@@ -1,5 +1,17 @@
 ##  (2023-11-29)
 
+## [0.3.0](https://github.com/zhid0399123/xcixtimestamp/compare/0.2.0...0.3.0) (2023-11-29)
+
+
+### Features
+
+* **style:** styled header section ([38a0fc3](https://github.com/zhid0399123/xcixtimestamp/commit/38a0fc383ff09ca6a224f46960df43c968112140))
+
+
+### Bug Fixes
+
+* **index:** fixed getEndpointSegment fn ([cf62015](https://github.com/zhid0399123/xcixtimestamp/commit/cf620158f5eef32859f116801bb8ada3efd711ed))
+
 ## [0.2.0](https://github.com/zhid0399123/xcixtimestamp/compare/0.1.0...0.2.0) (2023-11-29)
 
 
