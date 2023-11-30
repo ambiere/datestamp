@@ -10,6 +10,15 @@ const router = Router()
 router.use(json())
 router.use(pinoHttp({ ...loggerOptions }))
 
+router.get('/', async function (req, res, next) {
+  try {
+    const date = new Date()
+    res.json({ ...toUnix(date), ...toUTC(date) })
+  } catch (error) {
+    next(error)
+  }
+})
+
 router.get('/:date', async function (req, res, next) {
   const dateParam = req.params.date
   let date = {}
