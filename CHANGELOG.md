@@ -1,4 +1,14 @@
-##  (2023-11-29)
+##  (2023-11-30)
+
+## [0.4.0](https://github.com/zhid0399123/xcixtimestamp/compare/0.3.0-beta...0.4.0) (2023-11-30)
+
+
+### Features
+
+* **index:** added datestamp/ route to handle request when empty date param is passed ([4b5072b](https://github.com/zhid0399123/xcixtimestamp/commit/4b5072ba509d49b5766bd9408040db0ff9e7ab0e))
+* **routes/index:** added route triggered when user pass empty date param ([d59a239](https://github.com/zhid0399123/xcixtimestamp/commit/d59a239593fd401431b676ab73945db6242e9a78))
+* **server:** api versioning from npm package version ([1751b53](https://github.com/zhid0399123/xcixtimestamp/commit/1751b53381e77e946609e5e977fc676c2b920950))
+* **style:** made index page responsive ([2c4f3f2](https://github.com/zhid0399123/xcixtimestamp/commit/2c4f3f2afb3720e8c67a1dadb0d6742330075cf8))
 
 ## [0.3.0](https://github.com/zhid0399123/xcixtimestamp/compare/0.2.0...0.3.0) (2023-11-29)
 

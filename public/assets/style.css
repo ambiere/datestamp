@@ -25,14 +25,12 @@ body {
 header {
   display: flex;
   justify-content: center;
-  min-width: 360px;
   max-width: 1280px;
 }
 
 hr {
   border: 1px solid rgba(128, 128, 128, 0.209);
   border-top: none;
-  min-width: 360px;
   max-width: 1280px;
 }
 
@@ -85,7 +83,6 @@ main {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-inline: 2rem;
-  min-width: 360px;
   max-width: 1280px;
 }
 
@@ -101,4 +98,11 @@ main > p {
 #resource-link > p {
   height: 24px;
   font-size: 1.4rem;
+}
+
+@media screen and (max-width: 360px) {
+  hr,
+  main {
+    width: 320px;
+  }
 }
