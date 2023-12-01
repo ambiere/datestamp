@@ -1,4 +1,6 @@
-##  (2023-11-30)
+##  [0.4.0-beta]() 2023-11-30
+
+Initial release
 
 ## [0.4.0](https://github.com/zhid0399123/xcixtimestamp/compare/0.3.0-beta...0.4.0) (2023-11-30)
 
