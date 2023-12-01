@@ -25,6 +25,15 @@ t.test('Should return error when provided invalid date', async (t) => {
   })
 })
 
+t.test('Should return date timestamp for current date', async (t) => {
+  t.plan(3)
+  const date = new Date()
+  const response = await request(app).get('/v0/api/datestamp/')
+  t.equal(response.statusCode, 200)
+  t.ok(response.body, 'Returned datestamp for current date')
+  t.match(response.body, { unix: /\d+/, utc: date.toUTCString() })
+})
+
 t.test('Should return date timestamp', async (t) => {
   t.plan(3)
   const date = new Date('2023-11-27')
